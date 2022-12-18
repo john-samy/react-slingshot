@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: npm i
-      - run: npm run init
+      - run: npm run lnit
   test:
     docker:
       - image: circleci/node:13.8.0
@@ -19,7 +19,6 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm i
       - run: npm run audit
 workflows:
   my_workflow:
